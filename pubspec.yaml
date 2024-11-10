@@ -35,10 +35,33 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  flutter_launcher_icons: ^0.14.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter_launcher_icons:
+  image_path: "assets/icons/codink_logo.png"
+  ios: true
+  android: true
+  min_sdk_android: 26
+  remove_alpha_ios: true
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/icons/codink_logo.png"
+  web:
+    generate: true
+    image_path: "assets/icons/codink_logo.png"
+    background_color: "#ffffff"
+    theme_color: "#ffffff"
+  windows:
+    generate: true
+    image_path: "assets/icons/codink_logo.png"
+    icon_size: 48
+  macos:
+    generate: true
+    image_path: "assets/icons/codink_logo.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
