@@ -16,9 +16,11 @@ class KColors{
   static LinearGradient linearGradientDown = LinearGradient(
     colors: [
       Colors.white,
-      Colors.lightGreen,
+      Colors.lightGreen.withOpacity(.5),
       Colors.green.shade300,
-    ]
+    ],
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
   );
 
   static LinearGradient linearGradientUp = LinearGradient(
@@ -26,6 +28,8 @@ class KColors{
       Colors.green.shade300,
       Colors.lightGreen,
       Colors.white,
-    ]
+    ],
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
   );
 }

@@ -9,8 +9,8 @@ class CustomSpacing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * (height ?? 0),
-      width: MediaQuery.of(context).size.width * (width ?? 0),
+      height: MediaQuery.sizeOf(context).height * (height ?? 0),
+      width: MediaQuery.sizeOf(context).width * (width ?? 0),
       child: child,
     );
   }
