@@ -5,11 +5,11 @@ import 'package:codink_coop/widgets/text.dart';
 import 'package:flutter/material.dart';
 
 class CustomTestimonial extends StatelessWidget {
-  String image;
-  String review;
-  String name;
-  String location;
-  CustomTestimonial({super.key, required this.image, required this.review,required this.name, required this.location});
+  final String image;
+  final String review;
+  final String name;
+  final String location;
+  const CustomTestimonial({super.key, required this.image, required this.review,required this.name, required this.location});
 
   @override
   Widget build(BuildContext context) {

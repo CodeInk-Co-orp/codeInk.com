@@ -5,10 +5,10 @@ import 'package:codink_coop/widgets/text.dart';
 import 'package:flutter/material.dart';
 
 class CustomService extends StatelessWidget {
-  String image;
-  String title;
-  String subtitle;
-  CustomService({super.key, required this.image, required this.title,required this.subtitle});
+  final String image;
+  final String title;
+  final String subtitle;
+  const CustomService({super.key, required this.image, required this.title,required this.subtitle});
 
   @override
   Widget build(BuildContext context) {

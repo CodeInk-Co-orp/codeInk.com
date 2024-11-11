@@ -5,11 +5,11 @@ import 'package:codink_coop/widgets/text.dart';
 import 'package:flutter/material.dart';
 
 class CustomProjects extends StatelessWidget {
-  String image;
-  String title;
-  String subtitle;
-  void Function()? onTap;
-  CustomProjects({super.key, required this.image, required this.title,required this.subtitle, required this.onTap});
+  final String image;
+  final String title;
+  final String subtitle;
+  final void Function()? onTap;
+  const CustomProjects({super.key, required this.image, required this.title,required this.subtitle, required this.onTap});
 
   @override
   Widget build(BuildContext context) {

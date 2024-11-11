@@ -1,6 +1,5 @@
 import 'package:codink_coop/utils/themes.dart';
 import 'package:codink_coop/widgets/custom_projects.dart';
-import 'package:codink_coop/widgets/custom_service.dart';
 import 'package:codink_coop/widgets/custom_spacing.dart';
 import 'package:codink_coop/widgets/space.dart';
 import 'package:codink_coop/widgets/text.dart';
