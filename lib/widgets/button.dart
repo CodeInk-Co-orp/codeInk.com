@@ -1,3 +1,4 @@
+import "package:codink_coop/utils/themes.dart";
 import "package:codink_coop/widgets/space.dart";
 import "package:codink_coop/widgets/text.dart";
 import "package:flutter/material.dart";
@@ -28,7 +29,10 @@ class CustomButton extends StatelessWidget {
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
-          backgroundColor: color
+          backgroundColor: color ?? KColors.blue,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(6)
+          )
         ),
         child: Padding(
           padding: const EdgeInsets.all(6.0),
