@@ -8,11 +8,12 @@ class CustomText extends StatelessWidget {
   final Color textColor;
   final Color? backgroundColor;
   final bool? centerText;
+  final TextAlign? textAlign;
   final TextDecoration? textDecoration;
   final String? fontFamily;
   final TextOverflow? overflow;
   const CustomText({
-    super.key, required this.text, required this.fontSize, this.fontWeight, required this.textColor, this.backgroundColor, this.centerText, this.textDecoration, this.fontFamily, this.overflow,
+    super.key, required this.text, required this.fontSize, this.fontWeight, required this.textColor, this.backgroundColor, this.centerText, this.textDecoration, this.fontFamily, this.overflow, this.textAlign
   });
 
   @override
