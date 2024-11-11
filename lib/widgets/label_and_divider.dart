@@ -30,7 +30,7 @@ class CustomLabelAndDivider extends StatelessWidget {
             Container(
               width: horizontalSpace(context, .15),
               height: 2,
-              color: Colors.green,
+              color: Colors.blue,
             ),
            const CustomSpacing(height: .02),
             Container(

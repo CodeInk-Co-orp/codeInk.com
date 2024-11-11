@@ -6,18 +6,18 @@ class KColors{
   static Color lightGrey = Colors.grey.shade300;
   static const Color grey = Colors.grey;
   static Color darkGrey = Colors.grey.shade700;
-  static Color greenshade300 = Colors.green.shade300;
-  static const Color green = Colors.green;
-  static Color greenshade700 = Colors.green.shade700;
-  static Color lightGreenshade300 = Colors.lightGreen.shade300;
-  static const Color lightGreen = Colors.lightGreen;
-  static Color lightGreenshade700 = Colors.lightGreen.shade700;
+  static Color greenshade300 = Colors.blue.shade300;
+  static const Color blue = Colors.blue;
+  static Color greenshade700 = Colors.blue.shade700;
+  static Color lightBlueshade300 = Colors.lightBlue.shade300;
+  static const Color lightBlue = Colors.lightBlue;
+  static Color lightBlueshade700 = Colors.lightBlue.shade700;
 
   static LinearGradient linearGradientDown = LinearGradient(
     colors: [
       Colors.white,
-      Colors.lightGreen.withOpacity(.5),
-      Colors.green.shade300,
+      Colors.lightBlue.withOpacity(.5),
+      Colors.blue.shade300,
     ],
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
@@ -25,8 +25,8 @@ class KColors{
 
   static LinearGradient linearGradientUp = LinearGradient(
     colors: [
-      Colors.green.shade300,
-      Colors.lightGreen,
+      Colors.blue.shade300,
+      Colors.lightBlue,
       Colors.white,
     ],
     begin: Alignment.topCenter,
