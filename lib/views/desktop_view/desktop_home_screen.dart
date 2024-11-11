@@ -3,6 +3,7 @@ import 'package:codink_coop/services/get_theme.dart';
 import 'package:codink_coop/utils/themes.dart';
 import 'package:codink_coop/views/desktop_view/sections/introduction_section.dart';
 import 'package:codink_coop/views/desktop_view/sections/navigation_section.dart';
+import 'package:codink_coop/views/desktop_view/sections/service_section.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -31,6 +32,9 @@ class DesktopHomeScreen extends StatelessWidget {
               children: [
                 // Introduction Section
                 IntroductionSection(),
+
+                // Service  Section
+                ServiceSection()
                 // About Us Section
 
                 // Portfolio Section
