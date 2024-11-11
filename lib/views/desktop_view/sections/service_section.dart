@@ -13,7 +13,7 @@ class ServiceSection extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: horizontalSpace(context, .025),
-        vertical: verticalSpace(context, .012),
+        vertical: verticalSpace(context, .02),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,

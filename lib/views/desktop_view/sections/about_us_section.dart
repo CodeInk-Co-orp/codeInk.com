@@ -11,7 +11,8 @@ class AboutUsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
-        horizontal: horizontalSpace(context, .025)
+        horizontal: horizontalSpace(context, .025),
+        vertical: verticalSpace(context, .02)
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,30 +53,33 @@ class AboutUsSection extends StatelessWidget {
                 ),
                 SizedBox(width: horizontalSpace(context, 0.025)),
                 Expanded(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      CustomText(
-                        text: '''At Codink Coop, we are passionate about transforming ideas into digital experiences that engage and inspire.Our team is composed of skilled developers, designers, and strategists who specialize in crafting custom software solutions,from mobile and web applications to graphic design and branding. With a focus on both functionality and aesthetics,we bring expertise across multiple domains, including Android and iOS app development, web applications,API and payment integrations, and graphic design.''', 
-                        fontSize: 18,
-                        textAlign: TextAlign.start,
-                        textColor: KColors.black,
-                      ),
-                      CustomSpacing(height: .05),
-                      CustomText(
-                        text: "Our Mission", 
-                        fontSize: 30, 
-                        textColor: KColors.black,
-                        fontWeight: FontWeight.w500,
-                      ),
-                      CustomText(
-                        text: "To empower businesses and individuals through technology. By leveraging the latest tools and industry best practices, we deliver solutions that are not only innovative but also user-centered and reliable. Whether we're building a mobile app that delivers a seamless cross-platform experience or designing a logo that resonates with your brand, we work closely with our clients to ensure that every project aligns with their goals and vision.", 
-                        fontSize: 18,
-                        textAlign: TextAlign.start,
-                        textColor: KColors.black,
-                      )
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8.0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        CustomText(
+                          text: '''At Codink Coop, we are passionate about transforming ideas into digital experiences that engage and inspire.Our team is composed of skilled developers, designers, and strategists who specialize in crafting custom software solutions,from mobile and web applications to graphic design and branding. With a focus on both functionality and aesthetics,we bring expertise across multiple domains, including Android and iOS app development, web applications,API and payment integrations, and graphic design.''', 
+                          fontSize: 18,
+                          textAlign: TextAlign.start,
+                          textColor: KColors.black,
+                        ),
+                        CustomSpacing(height: .05),
+                        CustomText(
+                          text: "Our Mission", 
+                          fontSize: 30, 
+                          textColor: KColors.black,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        CustomText(
+                          text: "To empower businesses and individuals through technology. By leveraging the latest tools and industry best practices, we deliver solutions that are not only innovative but also user-centered and reliable. Whether we're building a mobile app that delivers a seamless cross-platform experience or designing a logo that resonates with your brand, we work closely with our clients to ensure that every project aligns with their goals and vision.", 
+                          fontSize: 18,
+                          textAlign: TextAlign.start,
+                          textColor: KColors.black,
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(width: horizontalSpace(context, 0.05)),
