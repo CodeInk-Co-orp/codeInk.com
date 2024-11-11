@@ -17,7 +17,7 @@ class CustomTestimonial extends StatelessWidget {
       width: 300,
       height: verticalSpace(context, 0.38),
       decoration: BoxDecoration(
-        color: KColors.lightBlueshade300,
+        color: KColors.blue.withOpacity(.05),
         borderRadius: BorderRadius.circular(10)
       ),
       child: Padding(

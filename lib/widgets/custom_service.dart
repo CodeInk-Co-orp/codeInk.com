@@ -16,7 +16,7 @@ class CustomService extends StatelessWidget {
       width: 300,
       height: verticalSpace(context, 0.55),
       decoration: BoxDecoration(
-        color: KColors.lightBlueshade300,
+        color: KColors.blue.withOpacity(.05),
         borderRadius: BorderRadius.circular(10)
       ),
       child: Padding(
@@ -49,7 +49,7 @@ class CustomService extends StatelessWidget {
             CustomText(
               text: subtitle,
               fontSize: 18,
-              textColor: KColors.black
+              textColor: KColors.darkGrey
             )
           ],
         ),
