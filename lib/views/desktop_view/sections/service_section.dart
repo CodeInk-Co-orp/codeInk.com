@@ -19,9 +19,6 @@ class ServiceSection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomSpacing(
-            height: 0.02,
-          ),
           CustomText(
             text: "Our Services", 
             fontSize: 30, 
@@ -35,18 +32,16 @@ class ServiceSection extends StatelessWidget {
             scrollDirection: Axis.horizontal,
              child: Row(
                children: [
-                 CustomService(
-                  image: "assets/icons/android.png", 
-                  title: "Android application development", 
-                  subtitle: "Specialized in creating clean, efficient and user-friendly applications. We build applications that deliver a consistent and seamless experience across all android applications."
-                  ),
-                  SizedBox(
-                    width: horizontalSpace(context, 0.03),
-                  ),
                   CustomService(
-                  image: "assets/icons/ios.png", 
-                  title: "IOS application development", 
-                  subtitle: "We develop high-quality iOS applications ensuring a seamless and native-like experience for Apple users. Our approach to iOS app development focuses on clean architecture, smooth UI animations, and efficient performance to meet the high expectations of iOS users."
+                    image: "assets/icons/android.png", 
+                    title: "Android application development", 
+                    subtitle: "Specialized in creating clean, efficient and user-friendly applications. We build applications that deliver a consistent and seamless experience across all android applications."
+                  ),
+                  CustomSpacing(width: .03),
+                  CustomService(
+                    image: "assets/icons/ios.png", 
+                    title: "IOS application development", 
+                    subtitle: "We develop high-quality iOS applications ensuring a seamless and native-like experience for Apple users. Our approach to iOS app development focuses on clean architecture, smooth UI animations, and efficient performance to meet the high expectations of iOS users."
                   ),
                   SizedBox(
                     width: horizontalSpace(context, 0.03),

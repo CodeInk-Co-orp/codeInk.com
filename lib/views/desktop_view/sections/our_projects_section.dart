@@ -36,49 +36,41 @@ class OurProjectsSection extends StatelessWidget {
              child: Row(
                children: [
                  CustomProjects(
-                  image: "assets/images/pick_and_drop.png", 
-                  title: "Pick and Drop", 
-                  subtitle: "Connects store owners with drives offering transport.Contain features like Real-time messaging,real-time location,make calls and many other.", 
-                  onTap: () {
-      
-                  },
+                    image: "assets/images/pick_and_drop.png", 
+                    title: "Pick and Drop", 
+                    subtitle: "Connects store owners with drives offering transport.Contain features like Real-time messaging,real-time location,make calls and many other.", 
+                    onTap: () {
+        
+                    },
                   ),
-                  SizedBox(
-                    width: horizontalSpace(context, 0.03),
-                  ),
+                  CustomSpacing(width: .03),
                   CustomProjects(
-                  image: "assets/images/life_assistant.png", 
-                  title: "Life assistant", 
-                  subtitle: "Help people make new friends around them. Enriched with google maps for real-time location sharing and also messaging where people can text each other",
-                  onTap: () {
-      
-                  },
+                    image: "assets/images/life_assistant.png", 
+                    title: "Life assistant", 
+                    subtitle: "Help people make new friends around them. Enriched with google maps for real-time location sharing and also messaging where people can text each other",
+                    onTap: () {
+        
+                    },
                   ),
-                  SizedBox(
-                    width: horizontalSpace(context, 0.03),
-                  ), 
+                  CustomSpacing(width: .03), 
                   CustomProjects(
-                  image: "assets/images/note_pad.png", 
-                  title: "Note pad", 
-                  subtitle: "Mordern notepad with 2A authentication making your data more secure",
-                  onTap: () {
-      
-                  },
+                    image: "assets/images/note_pad.png", 
+                    title: "Note pad", 
+                    subtitle: "Mordern notepad with 2A authentication making your data more secure",
+                    onTap: () {
+        
+                    },
                   ),
-                  SizedBox(
-                    width: horizontalSpace(context, 0.03),
-                  ), 
+                  CustomSpacing(width: .03), 
                   CustomProjects(
-                  image: "assets/images/web_page.jpg", 
-                  title: "WebApp", 
-                  subtitle: "Use to releave stress, helps in meditation also has audio based music for people with trouble sleeping",
-                  onTap: () {
-                    
-                  },
+                    image: "assets/images/web_page.jpg", 
+                    title: "WebApp", 
+                    subtitle: "Use to releave stress, helps in meditation also has audio based music for people with trouble sleeping",
+                    onTap: () {
+                      
+                    },
                   ),
-                  SizedBox(
-                    width: horizontalSpace(context, 0.03),
-                  ),                 
+                  CustomSpacing(width: .03),                 
                ],               
              ),
            ),

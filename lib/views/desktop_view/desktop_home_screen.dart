@@ -7,6 +7,7 @@ import 'package:codink_coop/views/desktop_view/sections/navigation_section.dart'
 import 'package:codink_coop/views/desktop_view/sections/our_projects_section.dart';
 import 'package:codink_coop/views/desktop_view/sections/service_section.dart';
 import 'package:codink_coop/views/desktop_view/sections/testimonial_section.dart';
+import 'package:codink_coop/widgets/custom_spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -41,7 +42,8 @@ class DesktopHomeScreen extends StatelessWidget {
                 ServiceSection(),
                 // Portfolio Section
                 OurProjectsSection(),
-                TestimonialSection()
+                TestimonialSection(),
+                CustomSpacing(height: .05),
               ],
             ),
           ),

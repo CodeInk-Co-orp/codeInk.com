@@ -1,6 +1,5 @@
 import 'package:codink_coop/utils/themes.dart';
 import 'package:codink_coop/widgets/custom_spacing.dart';
-import 'package:codink_coop/widgets/space.dart';
 import 'package:codink_coop/widgets/text.dart';
 import 'package:flutter/material.dart';
 
@@ -13,14 +12,14 @@ class CustomService extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      width: 300,
-      height: verticalSpace(context, 0.55),
+      width: 350,
+      height: 400,
       decoration: BoxDecoration(
         color: KColors.blue.withOpacity(.05),
         borderRadius: BorderRadius.circular(10)
       ),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(12.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -37,6 +36,7 @@ class CustomService extends StatelessWidget {
                 )
               ),
             ),
+            CustomSpacing(height: .012),
             CustomText(
               text: title, 
               fontSize: 25, 
@@ -44,7 +44,7 @@ class CustomService extends StatelessWidget {
               fontWeight: FontWeight.w500,
             ),
             CustomSpacing(
-              height: 0.01,
+              height: 0.025,
             ),
             CustomText(
               text: subtitle,

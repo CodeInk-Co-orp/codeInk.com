@@ -14,8 +14,8 @@ class CustomProjects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      width: 300,
-      height: verticalSpace(context, 0.55),
+      width: 350,
+      height: 380,
       decoration: BoxDecoration(
         color: KColors.blue.withOpacity(.05),
         borderRadius: BorderRadius.circular(10)
@@ -67,23 +67,29 @@ class CustomProjects extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.all(2.0),
-            child: CustomText(
-              text: title, 
-              fontSize: 25, 
-              textColor: KColors.black,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-          CustomSpacing(
-            height: 0.01,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(2.0),
-            child: CustomText(
-              text: subtitle,
-              fontSize: 18,
-              textColor: KColors.black
+            padding: const EdgeInsets.all(12.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                CustomText(
+                  text: title, 
+                  fontSize: 25, 
+                  textColor: KColors.black,
+                  fontWeight: FontWeight.w500,
+                ),
+                CustomSpacing(
+                  height: 0.01,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: CustomText(
+                    text: subtitle,
+                    fontSize: 18,
+                    textColor: KColors.black
+                  ),
+                ),
+              ],
             ),
           )
         ],

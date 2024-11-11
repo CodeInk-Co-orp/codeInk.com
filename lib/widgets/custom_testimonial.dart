@@ -1,6 +1,5 @@
 import 'package:codink_coop/utils/themes.dart';
 import 'package:codink_coop/widgets/custom_spacing.dart';
-import 'package:codink_coop/widgets/space.dart';
 import 'package:codink_coop/widgets/text.dart';
 import 'package:flutter/material.dart';
 
@@ -14,14 +13,14 @@ class CustomTestimonial extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      width: 300,
-      height: verticalSpace(context, 0.38),
+      width: 350,
+      height: 300,
       decoration: BoxDecoration(
         color: KColors.blue.withOpacity(.05),
         borderRadius: BorderRadius.circular(10)
       ),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(12.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -34,7 +33,7 @@ class CustomTestimonial extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 8,
+                  width: 12,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,6 +52,7 @@ class CustomTestimonial extends StatelessWidget {
                 ),
               ],
             ),
+            CustomSpacing(height: .03),
             CustomText(
               text: review, 
               fontSize: 18, 
