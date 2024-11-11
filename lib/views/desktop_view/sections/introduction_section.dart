@@ -1,5 +1,6 @@
 import 'package:codink_coop/services/get_theme.dart';
 import 'package:codink_coop/utils/themes.dart';
+import 'package:codink_coop/widgets/button.dart';
 import 'package:codink_coop/widgets/custom_spacing.dart';
 import 'package:codink_coop/widgets/space.dart';
 import 'package:codink_coop/widgets/text.dart';
@@ -11,7 +12,7 @@ class IntroductionSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: KColors.blue.withOpacity(.1),
+      color: KColors.blue.withOpacity(.05),
       height: verticalSpace(context, .9),
       width: horizontalSpace(context, 1),
       child: Row(
@@ -47,6 +48,13 @@ class IntroductionSection extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+              CustomSpacing(height: .05),
+              CustomButton(
+                onPressed: (){
+
+                },
+                text: "Book Us NOW"
+              )
             ],
           ),
           CustomSpacing(width: .05),
@@ -56,6 +64,7 @@ class IntroductionSection extends StatelessWidget {
               height: verticalSpace(context, .65),
               width: horizontalSpace(context, .5),
               image: AssetImage('assets/images/web_page.jpg'),
+              fit: BoxFit.cover,
             ),
           ),
         ],
