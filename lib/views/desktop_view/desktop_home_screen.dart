@@ -6,6 +6,7 @@ import 'package:codink_coop/views/desktop_view/sections/introduction_section.dar
 import 'package:codink_coop/views/desktop_view/sections/navigation_section.dart';
 import 'package:codink_coop/views/desktop_view/sections/our_projects_section.dart';
 import 'package:codink_coop/views/desktop_view/sections/service_section.dart';
+import 'package:codink_coop/views/desktop_view/sections/testimonial_section.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -39,7 +40,8 @@ class DesktopHomeScreen extends StatelessWidget {
                 // Service  Section
                 ServiceSection(),
                 // Portfolio Section
-                OurProjectsSection()
+                OurProjectsSection(),
+                TestimonialSection()
               ],
             ),
           ),
