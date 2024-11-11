@@ -60,9 +60,6 @@ class TestimonialSection extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(
-          width: horizontalSpace(context, 0.04),
-        ),
       ],
     );
   }
