@@ -11,9 +11,10 @@ class CustomText extends StatelessWidget {
   final TextAlign? textAlign;
   final TextDecoration? textDecoration;
   final String? fontFamily;
+  final int? maxLines;
   final TextOverflow? overflow;
   const CustomText({
-    super.key, required this.text, required this.fontSize, this.fontWeight, required this.textColor, this.backgroundColor, this.centerText, this.textDecoration, this.fontFamily, this.overflow, this.textAlign
+    super.key, required this.text, required this.fontSize, this.fontWeight, required this.textColor, this.backgroundColor, this.centerText, this.textDecoration, this.fontFamily, this.overflow, this.textAlign, this.maxLines
   });
 
   @override
@@ -27,6 +28,7 @@ class CustomText extends StatelessWidget {
         backgroundColor: backgroundColor ?? Colors.transparent,
         decoration: textDecoration ?? TextDecoration.none,
       ),
+      maxLines: maxLines,
       textAlign: centerText == true ? TextAlign.center : TextAlign.left,
       overflow: overflow ?? TextOverflow.visible,
     );

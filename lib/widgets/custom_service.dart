@@ -1,5 +1,6 @@
 import 'package:codink_coop/services/get_theme.dart';
 import 'package:codink_coop/utils/themes.dart';
+import 'package:codink_coop/views/layout_screen.dart';
 import 'package:codink_coop/widgets/custom_spacing.dart';
 import 'package:codink_coop/widgets/text.dart';
 import 'package:flutter/material.dart';
@@ -13,8 +14,8 @@ class CustomService extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      width: 350,
-      height: 350,
+      width: !LayoutScreen.isSmallScreen(context) ? 350 : 250,
+      height: !LayoutScreen.isSmallScreen(context) ? 350 : 370,
       decoration: BoxDecoration(
         color: isLightTheme(context) ? KColors.blue.withOpacity(.05) : KColors.darkerGrey,
         borderRadius: BorderRadius.circular(10)
@@ -51,7 +52,9 @@ class CustomService extends StatelessWidget {
               text: subtitle,
               fontSize: 18,
               textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
-            )
+              maxLines: 8,
+              overflow: TextOverflow.ellipsis,
+            ),
           ],
         ),
       ),

@@ -29,23 +29,28 @@ class NavigationSection extends StatelessWidget {
             children: [
               Visibility(
                 visible: LayoutScreen.isLargeScreen(context) || LayoutScreen.isSmallScreen(context),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: Image(
-                        height: 100,
-                        width: 100,
-                        image: AssetImage('assets/icons/codink_logo.png'),
+                child: GestureDetector(
+                  onTap: (){
+                    homeScreenController.navigateToSection("Introduction");
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Image(
+                          height: 100,
+                          width: 100,
+                          image: AssetImage('assets/icons/codink_logo.png'),
+                        ),
                       ),
-                    ),
-                    CustomText(
-                      text: "CodInk Coop",
-                      fontSize: 18,
-                      textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
-                    ),
-                  ],
+                      CustomText(
+                        text: "CodInk Coop",
+                        fontSize: 18,
+                        textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Visibility(
@@ -83,11 +88,26 @@ class NavigationSection extends StatelessWidget {
               Visibility(
                 visible: LayoutScreen.isSmallScreen(context),
                 child: PopupMenuButton(
+                  color: isLightTheme(context) ? KColors.white : KColors.black,
                   icon: Icon(
                     Icons.more_vert,
                     color: isLightTheme(context) ? KColors.black : KColors.white,
                   ),
-                  itemBuilder: (context) => [],
+                  itemBuilder: (context) => [
+                    ...List.generate(
+                      navigationTabs.length,
+                      (index) => PopupMenuItem(
+                        onTap: (){
+                          homeScreenController.navigateToSection(navigationTabs[index]['label']);
+                        },
+                        child: CustomText(
+                          text: navigationTabs[index]['label'],
+                          fontSize: 18,
+                          textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey
+                        )
+                      )
+                    ),
+                  ],
                 ),
               ),
             ],

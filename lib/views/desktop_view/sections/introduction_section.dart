@@ -16,7 +16,7 @@ class IntroductionSection extends StatelessWidget {
     return Container(
       key: introductionGlobalKey,
       color: isLightTheme(context) ? KColors.blue.withOpacity(.05) : KColors.darkerGrey,
-      height: verticalSpace(context, .9) < 500 ? 500 : verticalSpace(context, .9),
+      height: !LayoutScreen.isSmallScreen(context) ? verticalSpace(context, .9) < 500 ? 500 : verticalSpace(context, .9) : 800,
       width: horizontalSpace(context, 1),
       child: !LayoutScreen.isSmallScreen(context) ? Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -53,6 +53,7 @@ class IntroductionSection extends StatelessWidget {
               ),
               CustomSpacing(height: .05),
               CustomButton(
+                horizontalPadding: .13,
                 onPressed: (){
 
                 },
@@ -71,59 +72,62 @@ class IntroductionSection extends StatelessWidget {
             ),
           ),
         ],
-      ) : Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Image(
-              height: verticalSpace(context, .65) < 400 ? 400 : verticalSpace(context, .65),
-              width: horizontalSpace(context, .5),
+      ) : Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: horizontalSpace(context, .05),
+          vertical: verticalSpace(context, .05),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Image(
+              height: verticalSpace(context, .25),
+              width: horizontalSpace(context, .95),
               image: AssetImage('assets/images/web_page.jpg'),
               fit: BoxFit.cover,
             ),
-          ),
-          CustomSpacing(width: .05),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CustomText(
-                text: "Start your journey with us",
-                fontSize: 16,
-                textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
-                fontWeight: FontWeight.bold,
-              ),
-              CustomSpacing(height: .02),
-              SizedBox(
-                width: horizontalSpace(context, .35),
-                child: CustomText(
-                  text: "Welcome to CodeInk Solutions, your trusted partner in navigating the digital landscape. Explore our services, insights, and resources to discover how we can empower your organization to thrive in the digital age.",
-                  fontSize: 22,
+            CustomSpacing(height: .05),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CustomText(
+                  text: "Start your journey with us",
+                  fontSize: 16,
                   textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
                   fontWeight: FontWeight.bold,
                 ),
-              ),
-              CustomSpacing(height: .035),
-              SizedBox(
-                width: horizontalSpace(context, .35),
-                child: CustomText(
-                  text: "Crafting Digital Solutions. Driving Business Growth.",
-                  fontSize: 18,
-                  textColor: isLightTheme(context) ? KColors.grey : KColors.lightGrey,
-                  fontWeight: FontWeight.bold,
+                CustomSpacing(height: .02),
+                SizedBox(
+                  width: horizontalSpace(context, .95),
+                  child: CustomText(
+                    text: "Welcome to CodeInk Solutions, your trusted partner in navigating the digital landscape. Explore our services, insights, and resources to discover how we can empower your organization to thrive in the digital age.",
+                    fontSize: 22,
+                    textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              CustomSpacing(height: .05),
-              CustomButton(
-                onPressed: (){
-
-                },
-                text: "Book Us NOW"
-              )
-            ],
-          ),
-        ],
+                CustomSpacing(height: .035),
+                SizedBox(
+                  width: horizontalSpace(context, .95),
+                  child: CustomText(
+                    text: "Crafting Digital Solutions. Driving Business Growth.",
+                    fontSize: 18,
+                    textColor: isLightTheme(context) ? KColors.grey : KColors.lightGrey,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                CustomSpacing(height: .05),
+                CustomButton(
+                  onPressed: (){
+        
+                  },
+                  text: "Book Us NOW"
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
