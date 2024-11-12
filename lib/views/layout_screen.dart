@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 
 class LayoutScreen extends StatelessWidget {
   const LayoutScreen({super.key});
+  static bool isLargeScreen(BuildContext context) => MediaQuery.sizeOf(context).width > 1000;
   static bool isMediumScreen(BuildContext context) => MediaQuery.sizeOf(context).width < 1000;
+  static bool isSmallScreen(BuildContext context) => MediaQuery.sizeOf(context).width < 600;
 
   @override
   Widget build(BuildContext context) {

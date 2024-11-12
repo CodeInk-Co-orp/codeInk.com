@@ -21,14 +21,14 @@ class NavigationSection extends StatelessWidget {
       child: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: horizontalSpace(context, .05),
+            horizontal: horizontalSpace(context, !LayoutScreen.isSmallScreen(context) ? .05 : .02),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Visibility(
-                visible: !LayoutScreen.isMediumScreen(context),
+                visible: LayoutScreen.isLargeScreen(context) || LayoutScreen.isSmallScreen(context),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -48,32 +48,48 @@ class NavigationSection extends StatelessWidget {
                   ],
                 ),
               ),
-              Row(
-                children: [
-                  ...List.generate(
-                    navigationTabs.length,
-                    (index) => Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12),
-                      child: GestureDetector(
-                        onTap: (){
-                          homeScreenController.navigateToSection(navigationTabs[index]['label']);
-                        },
-                        child: CustomText(
-                          text: navigationTabs[index]['label'],
-                          fontSize: 18,
-                          textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
-                          fontWeight: FontWeight.bold,
+              Visibility(
+                visible: !LayoutScreen.isSmallScreen(context),
+                child: Row(
+                  children: [
+                    ...List.generate(
+                      navigationTabs.length,
+                      (index) => Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12),
+                        child: GestureDetector(
+                          onTap: (){
+                            homeScreenController.navigateToSection(navigationTabs[index]['label']);
+                          },
+                          child: CustomText(
+                            text: navigationTabs[index]['label'],
+                            fontSize: 18,
+                            textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
-                    ),
-                  )
-                ],
+                    )
+                  ],
+                ),
               ),
-              CustomButton(
-                onPressed: (){},
-                color: Colors.purple,
-                text: "Contact"
-              )
+              Visibility(
+                visible: !LayoutScreen.isSmallScreen(context),
+                child: CustomButton(
+                  onPressed: (){},
+                  color: Colors.purple,
+                  text: "Contact"
+                ),
+              ),
+              Visibility(
+                visible: LayoutScreen.isSmallScreen(context),
+                child: PopupMenuButton(
+                  icon: Icon(
+                    Icons.more_vert,
+                    color: isLightTheme(context) ? KColors.black : KColors.white,
+                  ),
+                  itemBuilder: (context) => [],
+                ),
+              ),
             ],
           ),
         ),
