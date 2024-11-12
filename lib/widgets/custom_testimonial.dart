@@ -55,12 +55,17 @@ class CustomTestimonial extends StatelessWidget {
               ],
             ),
             CustomSpacing(height: .03),
-            CustomText(
+            LayoutScreen.isSmallScreen(context) ? CustomText(
               text: review, 
               fontSize: 18,
-              maxLines: LayoutScreen.isSmallScreen(context) ? 6 : null,
+              maxLines: 6,
               textColor: isLightTheme(context) ?  KColors.black : KColors.lightGrey,
               overflow: TextOverflow.ellipsis,
+              fontWeight: FontWeight.w500,
+            ) : CustomText(
+              text: review, 
+              fontSize: 18,
+              textColor: isLightTheme(context) ?  KColors.black : KColors.lightGrey,
               fontWeight: FontWeight.w500,
             ),
             CustomSpacing(
