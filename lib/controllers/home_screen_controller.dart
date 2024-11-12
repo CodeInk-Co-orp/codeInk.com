@@ -24,7 +24,7 @@ class HomeScreenController extends GetxController{
   void navigateToSection(String label){
     try{
       Scrollable.ensureVisible(
-        label.toLowerCase() == 'service' ? serviceGlobalKey.currentContext!
+        label.toLowerCase() == 'services' ? serviceGlobalKey.currentContext!
         : label.toLowerCase() == 'about us' ? aboutMeGlobalKey.currentContext!
         : label.toLowerCase() == 'our projects' ? portfolioGlobalKey.currentContext!
         : label.toLowerCase() == 'testimonials' ? testimonialsGlobalKey.currentContext!

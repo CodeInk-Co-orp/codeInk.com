@@ -8,7 +8,7 @@ List<Map<String, dynamic>> navigationTabs = [
     'label' : 'About US',
   },
   {
-    'label' : 'Service',
+    'label' : 'Services',
   },
   {
     'label' : 'Our Projects',
