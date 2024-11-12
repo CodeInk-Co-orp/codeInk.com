@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeScreenController extends GetxController{
-  int mobileScreenView = 500;
+  int mobileScreenView = 550;
   final ScrollController scrollController = ScrollController();
   Logging logging = Logging();
   RxBool navbarVisible = true.obs;
