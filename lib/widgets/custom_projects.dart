@@ -1,3 +1,4 @@
+import 'package:codink_coop/services/get_theme.dart';
 import 'package:codink_coop/utils/themes.dart';
 import 'package:codink_coop/widgets/custom_spacing.dart';
 import 'package:codink_coop/widgets/space.dart';
@@ -17,7 +18,7 @@ class CustomProjects extends StatelessWidget {
       width: 350,
       height: 380,
       decoration: BoxDecoration(
-        color: KColors.blue.withOpacity(.05),
+        color: isLightTheme(context) ? KColors.blue.withOpacity(.05) : KColors.darkerGrey,
         borderRadius: BorderRadius.circular(10)
       ),
       child: Column(
@@ -29,7 +30,7 @@ class CustomProjects extends StatelessWidget {
                 height: verticalSpace(context, 0.3),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: KColors.white,
+                  color: isLightTheme(context) ? KColors.white : KColors.black,
                   image: DecorationImage(
                     image: AssetImage(
                       image,
@@ -49,7 +50,7 @@ class CustomProjects extends StatelessWidget {
                     ),
                     child: Tooltip(
                       decoration: BoxDecoration(
-                        color: KColors.blue,
+                        color: isLightTheme(context) ? KColors.blue : KColors.darkerGrey,
                         borderRadius: BorderRadius.circular(4)
                       ),
                       message: "Download APK",
@@ -75,7 +76,7 @@ class CustomProjects extends StatelessWidget {
                 CustomText(
                   text: title, 
                   fontSize: 25, 
-                  textColor: KColors.black,
+                  textColor: isLightTheme(context) ?  KColors.black : KColors.white,
                   fontWeight: FontWeight.w500,
                 ),
                 CustomSpacing(
@@ -86,7 +87,7 @@ class CustomProjects extends StatelessWidget {
                   child: CustomText(
                     text: subtitle,
                     fontSize: 18,
-                    textColor: KColors.black
+                    textColor: isLightTheme(context) ? KColors.black : KColors.lightGrey,
                   ),
                 ),
               ],

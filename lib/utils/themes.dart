@@ -6,6 +6,7 @@ class KColors{
   static Color lightGrey = Colors.grey.shade300;
   static const Color grey = Colors.grey;
   static Color darkGrey = Colors.grey.shade700;
+  static Color darkerGrey = Colors.grey.shade900;
   static Color greenshade300 = Colors.blue.shade300;
   static const Color blue = Colors.blue;
   static Color greenshade700 = Colors.blue.shade700;

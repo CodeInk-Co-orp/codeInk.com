@@ -12,8 +12,8 @@ class IntroductionSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: KColors.blue.withOpacity(.05),
-      height: verticalSpace(context, .9),
+      color: isLightTheme(context) ? KColors.blue.withOpacity(.05) : KColors.darkerGrey,
+      height: verticalSpace(context, .9) < 500 ? 500 : verticalSpace(context, .9),
       width: horizontalSpace(context, 1),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -25,7 +25,7 @@ class IntroductionSection extends StatelessWidget {
               CustomText(
                 text: "Start your journey with us",
                 fontSize: 16,
-                textColor: getTheme(context) == Brightness.light ? KColors.darkGrey : KColors.lightGrey,
+                textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
                 fontWeight: FontWeight.bold,
               ),
               CustomSpacing(height: .02),
@@ -34,7 +34,7 @@ class IntroductionSection extends StatelessWidget {
                 child: CustomText(
                   text: "Start your journey with us " * 5,
                   fontSize: 22,
-                  textColor: getTheme(context) == Brightness.light ? KColors.darkGrey : KColors.lightGrey,
+                  textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -44,7 +44,7 @@ class IntroductionSection extends StatelessWidget {
                 child: CustomText(
                   text: "Start your journey with us " * 2,
                   fontSize: 18,
-                  textColor: getTheme(context) == Brightness.light ? KColors.grey : KColors.lightGrey,
+                  textColor: isLightTheme(context) ? KColors.grey : KColors.lightGrey,
                   fontWeight: FontWeight.bold,
                 ),
               ),

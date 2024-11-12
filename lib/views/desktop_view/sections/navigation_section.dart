@@ -1,4 +1,5 @@
 import 'package:codink_coop/controllers/home_screen_controller.dart';
+import 'package:codink_coop/services/get_theme.dart';
 import 'package:codink_coop/utils/themes.dart';
 import 'package:codink_coop/widgets/button.dart';
 import 'package:codink_coop/widgets/space.dart';
@@ -12,9 +13,9 @@ class NavigationSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: verticalSpace(context, .1),
+      height: 65,
       width: horizontalSpace(context, 1),
-      color: KColors.white,
+      color: isLightTheme(context) ? KColors.white : KColors.black,
       child: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(
@@ -38,7 +39,7 @@ class NavigationSection extends StatelessWidget {
                   CustomText(
                     text: "CodInk Coop",
                     fontSize: 18,
-                    textColor: KColors.darkGrey,
+                    textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
                   ),
                 ],
               ),
@@ -51,7 +52,7 @@ class NavigationSection extends StatelessWidget {
                       child: CustomText(
                         text: ['Service', 'About Me', 'Portfolio', 'Testimonials'][index],
                         fontSize: 18,
-                        textColor: KColors.darkGrey,
+                        textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
                       ),
                     ),
                   )

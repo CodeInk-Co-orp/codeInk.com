@@ -1,3 +1,4 @@
+import 'package:codink_coop/services/get_theme.dart';
 import 'package:codink_coop/utils/themes.dart';
 import 'package:codink_coop/widgets/custom_spacing.dart';
 import 'package:codink_coop/widgets/text.dart';
@@ -16,7 +17,7 @@ class CustomTestimonial extends StatelessWidget {
       width: 350,
       height: 300,
       decoration: BoxDecoration(
-        color: KColors.blue.withOpacity(.05),
+        color: isLightTheme(context) ? KColors.blue.withOpacity(.05) : KColors.darkerGrey,
         borderRadius: BorderRadius.circular(10)
       ),
       child: Padding(
@@ -41,12 +42,12 @@ class CustomTestimonial extends StatelessWidget {
                     CustomText(
                       text: name, 
                       fontSize: 20, 
-                      textColor: KColors.black
+                      textColor: isLightTheme(context) ? KColors.black : KColors.white,
                     ),
                     CustomText(
                       text: location, 
                       fontSize: 16, 
-                      textColor: KColors.darkGrey
+                      textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
                     ),
                   ],
                 ),
@@ -56,7 +57,7 @@ class CustomTestimonial extends StatelessWidget {
             CustomText(
               text: review, 
               fontSize: 18, 
-              textColor: KColors.black,
+              textColor: isLightTheme(context) ?  KColors.black : KColors.lightGrey,
               fontWeight: FontWeight.w500,
             ),
             CustomSpacing(
@@ -66,10 +67,10 @@ class CustomTestimonial extends StatelessWidget {
               children: [
                 ...List.generate(
                   5, 
-                 (context)=>Icon(
-                  Icons.star_rate,
-                  color: Colors.yellow,
-                ),
+                 (context) =>Icon(
+                    Icons.star_rate,
+                    color: Colors.yellow,
+                  ),
                 )
               ],
             )

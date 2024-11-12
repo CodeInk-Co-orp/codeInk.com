@@ -1,3 +1,4 @@
+import 'package:codink_coop/services/get_theme.dart';
 import 'package:codink_coop/utils/themes.dart';
 import 'package:codink_coop/widgets/custom_spacing.dart';
 import 'package:codink_coop/widgets/text.dart';
@@ -15,7 +16,7 @@ class CustomService extends StatelessWidget {
       width: 350,
       height: 400,
       decoration: BoxDecoration(
-        color: KColors.blue.withOpacity(.05),
+        color: isLightTheme(context) ? KColors.blue.withOpacity(.05) : KColors.darkerGrey,
         borderRadius: BorderRadius.circular(10)
       ),
       child: Padding(
@@ -40,7 +41,7 @@ class CustomService extends StatelessWidget {
             CustomText(
               text: title, 
               fontSize: 25, 
-              textColor: KColors.black,
+              textColor: isLightTheme(context) ? KColors.black :KColors.white,
               fontWeight: FontWeight.w500,
             ),
             CustomSpacing(
@@ -49,7 +50,7 @@ class CustomService extends StatelessWidget {
             CustomText(
               text: subtitle,
               fontSize: 18,
-              textColor: KColors.darkGrey
+              textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
             )
           ],
         ),

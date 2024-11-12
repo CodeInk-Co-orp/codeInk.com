@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
 
-Brightness getTheme(BuildContext context) {
-  return MediaQuery.platformBrightnessOf(context);
+bool isLightTheme(BuildContext context) {
+  return MediaQuery.platformBrightnessOf(context) == Brightness.light;
 }

@@ -1,3 +1,4 @@
+import 'package:codink_coop/services/get_theme.dart';
 import 'package:codink_coop/widgets/custom_spacing.dart';
 import 'package:codink_coop/widgets/custom_testimonial.dart';
 import 'package:codink_coop/widgets/space.dart';
@@ -23,7 +24,7 @@ class TestimonialSection extends StatelessWidget {
           CustomText(
             text: "Our Testimonials", 
             fontSize: 30, 
-            textColor: KColors.black,
+            textColor: isLightTheme(context) ?  KColors.black : KColors.white,
             fontWeight: FontWeight.w500,
           ),
           CustomSpacing(height: .02),

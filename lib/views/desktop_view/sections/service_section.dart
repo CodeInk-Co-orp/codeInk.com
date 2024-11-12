@@ -1,3 +1,4 @@
+import 'package:codink_coop/services/get_theme.dart';
 import 'package:codink_coop/utils/themes.dart';
 import 'package:codink_coop/widgets/custom_service.dart';
 import 'package:codink_coop/widgets/custom_spacing.dart';
@@ -22,7 +23,7 @@ class ServiceSection extends StatelessWidget {
           CustomText(
             text: "Our Services", 
             fontSize: 30, 
-            textColor: KColors.black,
+            textColor: isLightTheme(context) ? KColors.black : KColors.white,
             fontWeight: FontWeight.w500,
           ),
           CustomSpacing(

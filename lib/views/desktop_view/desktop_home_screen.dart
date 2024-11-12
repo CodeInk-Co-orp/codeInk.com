@@ -18,7 +18,7 @@ class DesktopHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: getTheme(context) == Brightness.light ? KColors.white : KColors.white,
+      backgroundColor: isLightTheme(context) ? KColors.white : KColors.black,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
