@@ -63,7 +63,7 @@ class IntroductionSection extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Image(
-              height: verticalSpace(context, .65),
+              height: verticalSpace(context, .65) < 400 ? 400 : verticalSpace(context, .65),
               width: horizontalSpace(context, .5),
               image: AssetImage('assets/images/web_page.jpg'),
               fit: BoxFit.cover,
