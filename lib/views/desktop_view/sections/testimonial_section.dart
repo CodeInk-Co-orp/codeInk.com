@@ -36,21 +36,21 @@ class TestimonialSection extends StatelessWidget {
               children: [
                 CustomTestimonial(
                   image: "assets/images/1.png", 
-                  review: "I had the pleasure of working with Codink Coop on developing our application, and I couldn’t be more pleased with the outcome. From the start, their team was professional, communicative, and extremely knowledgeable.", 
+                  review: "I had the pleasure of working with CodeInk Solutions on developing our application, and I couldn’t be more pleased with the outcome. From the start, their team was professional, communicative, and extremely knowledgeable.", 
                   name: "Zeeshan Jerral", 
                   location: "Pakistan"
                 ),
                 CustomSpacing(width: .03),
                 CustomTestimonial(
                   image: "assets/images/2.jpg", 
-                  review: "We partnered with Codink Coop for life assistant project, and the results have exceeded our expectations. From start to finish, the team demonstrated professionalism, technical expertise, and a deep understanding of our vision.", 
+                  review: "We partnered with CodeInk Solutions for life assistant project, and the results have exceeded our expectations. From start to finish, the team demonstrated professionalism, technical expertise, and a deep understanding of our vision.", 
                   name: "Ahaan Rakesh", 
                   location: "India"
                 ),
                 CustomSpacing(width: .03),
                 CustomTestimonial(
                   image: "assets/images/3.jpg", 
-                  review: "Working with Codink Coop for our logo and branding was a fantastic experience from start to finish. They took the time to understand our brand’s vision, values, and target audience, and the results were better than we could have imagined!", 
+                  review: "Working with CodeInk Solutions for our logo and branding was a fantastic experience from start to finish. They took the time to understand our brand’s vision, values, and target audience, and the results were better than we could have imagined!", 
                   name: "Olivia", 
                   location: "USA"
                 ),

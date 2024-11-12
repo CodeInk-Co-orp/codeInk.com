@@ -63,7 +63,7 @@ class AboutUsSection extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         CustomText(
-                          text: '''At Codink Coop, we are passionate about transforming ideas into digital experiences that engage and inspire.Our team is composed of skilled developers, designers, and strategists who specialize in crafting custom software solutions,from mobile and web applications to graphic design and branding. With a focus on both functionality and aesthetics,we bring expertise across multiple domains, including Android and iOS app development, web applications,API and payment integrations, and graphic design.''', 
+                          text: '''At CodeInk Solutions, we are passionate about transforming ideas into digital experiences that engage and inspire.Our team is composed of skilled developers, designers, and strategists who specialize in crafting custom software solutions,from mobile and web applications to graphic design and branding. With a focus on both functionality and aesthetics,we bring expertise across multiple domains, including Android and iOS app development, web applications,API and payment integrations, and graphic design.''', 
                           fontSize: 18,
                           textAlign: TextAlign.start,
                           textColor: isLightTheme(context) ? KColors.black : KColors.lightGrey,
@@ -114,7 +114,7 @@ class AboutUsSection extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(vertical: 8.0),
                         child: Center(
                           child: CustomText(
-                            text: '''At Codink Coop, we are passionate about transforming ideas into digital experiences that engage and inspire.Our team is composed of skilled developers, designers, and strategists who specialize in crafting custom software solutions,from mobile and web applications to graphic design and branding. With a focus on both functionality and aesthetics,we bring expertise across multiple domains, including Android and iOS app development, web applications,API and payment integrations, and graphic design.''', 
+                            text: '''At CodeInk Solutions, we are passionate about transforming ideas into digital experiences that engage and inspire.Our team is composed of skilled developers, designers, and strategists who specialize in crafting custom software solutions,from mobile and web applications to graphic design and branding. With a focus on both functionality and aesthetics,we bring expertise across multiple domains, including Android and iOS app development, web applications,API and payment integrations, and graphic design.''', 
                             fontSize: 18,
                             textAlign: TextAlign.start,
                             textColor: isLightTheme(context) ? KColors.black : KColors.lightGrey,
