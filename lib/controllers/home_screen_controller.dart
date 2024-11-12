@@ -12,13 +12,6 @@ class HomeScreenController extends GetxController{
   void scrollListen(){
     List<double> trend = [];
     scrollController.addListener((){
-      // if(scrollController.offset < scrollOffset.value){
-      //   navbarVisible.value = true;
-      //   logging("To true");
-      // } else if(scrollController.offset > scrollOffset.value){
-      //   navbarVisible.value = false;
-      //   logging("To false");
-      // }
       trend.add(scrollController.offset);
     });
   }
