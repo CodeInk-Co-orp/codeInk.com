@@ -1,7 +1,6 @@
 import 'package:codink_coop/services/get_theme.dart';
 import 'package:codink_coop/utils/themes.dart';
 import 'package:codink_coop/widgets/custom_spacing.dart';
-import 'package:codink_coop/widgets/space.dart';
 import 'package:codink_coop/widgets/text.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +26,7 @@ class CustomProjects extends StatelessWidget {
           Stack(
             children: [
               Container(
-                height: verticalSpace(context, 0.3),
+                height: 200,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                   color: isLightTheme(context) ? KColors.white : KColors.black,

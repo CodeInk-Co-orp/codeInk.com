@@ -7,11 +7,13 @@ import 'package:codink_coop/widgets/text.dart';
 import 'package:flutter/material.dart';
 
 class AboutUsSection extends StatelessWidget {
-  const AboutUsSection({super.key});
+  const AboutUsSection({super.key, required this.aboutMeGlobalKey});
+  final GlobalKey aboutMeGlobalKey;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
+      key: aboutMeGlobalKey,
       padding: EdgeInsets.symmetric(
         horizontal: horizontalSpace(context, .025),
         vertical: verticalSpace(context, .02)

@@ -8,11 +8,13 @@ import 'package:flutter/material.dart';
 import '../../../utils/themes.dart';
 
 class TestimonialSection extends StatelessWidget {
-  const TestimonialSection({super.key});
+  const TestimonialSection({super.key, required this.testimonialsGlobalKey});
+  final GlobalKey testimonialsGlobalKey;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
+      key: testimonialsGlobalKey,
       padding: EdgeInsets.symmetric(
         horizontal: horizontalSpace(context, .025),
         vertical: verticalSpace(context, .012),

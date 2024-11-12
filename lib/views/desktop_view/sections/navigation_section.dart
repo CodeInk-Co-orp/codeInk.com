@@ -1,3 +1,4 @@
+import 'package:codink_coop/constants/navigation.dart';
 import 'package:codink_coop/controllers/home_screen_controller.dart';
 import 'package:codink_coop/services/get_theme.dart';
 import 'package:codink_coop/utils/themes.dart';
@@ -50,13 +51,19 @@ class NavigationSection extends StatelessWidget {
               Row(
                 children: [
                   ...List.generate(
-                    ['Service', 'About Me', 'Portfolio', 'Testimonials'].length,
+                    navigationTabs.length,
                     (index) => Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 12),
-                      child: CustomText(
-                        text: ['Service', 'About Me', 'Portfolio', 'Testimonials'][index],
-                        fontSize: 18,
-                        textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
+                      child: GestureDetector(
+                        onTap: (){
+                          homeScreenController.navigateToSection(navigationTabs[index]['label']);
+                        },
+                        child: CustomText(
+                          text: navigationTabs[index]['label'],
+                          fontSize: 18,
+                          textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   )

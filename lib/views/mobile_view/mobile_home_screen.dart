@@ -1,9 +1,10 @@
 import 'package:codink_coop/controllers/home_screen_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MobileHomeScreen extends StatelessWidget {
-  const MobileHomeScreen({super.key, required this.homeScreenController});
-  final HomeScreenController homeScreenController;
+  MobileHomeScreen({super.key, required});
+  final HomeScreenController homeScreenController = Get.put(HomeScreenController());
 
   @override
   Widget build(BuildContext context) {

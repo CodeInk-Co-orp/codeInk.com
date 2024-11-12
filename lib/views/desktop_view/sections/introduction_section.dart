@@ -7,11 +7,13 @@ import 'package:codink_coop/widgets/text.dart';
 import 'package:flutter/material.dart';
 
 class IntroductionSection extends StatelessWidget {
-  const IntroductionSection({super.key});
+  const IntroductionSection({super.key, required this.introductionGlobalKey});
+  final GlobalKey introductionGlobalKey;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: introductionGlobalKey,
       color: isLightTheme(context) ? KColors.blue.withOpacity(.05) : KColors.darkerGrey,
       height: verticalSpace(context, .9) < 500 ? 500 : verticalSpace(context, .9),
       width: horizontalSpace(context, 1),
@@ -32,7 +34,7 @@ class IntroductionSection extends StatelessWidget {
               SizedBox(
                 width: horizontalSpace(context, .35),
                 child: CustomText(
-                  text: "Start your journey with us " * 5,
+                  text: "Welcome to CodeInk Solutions, your trusted partner in navigating the digital landscape. Explore our services, insights, and resources to discover how we can empower your organization to thrive in the digital age.",
                   fontSize: 22,
                   textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
                   fontWeight: FontWeight.bold,
@@ -42,7 +44,7 @@ class IntroductionSection extends StatelessWidget {
               SizedBox(
                 width: horizontalSpace(context, .35),
                 child: CustomText(
-                  text: "Start your journey with us " * 2,
+                  text: "Crafting Digital Solutions. Driving Business Growth.",
                   fontSize: 18,
                   textColor: isLightTheme(context) ? KColors.grey : KColors.lightGrey,
                   fontWeight: FontWeight.bold,

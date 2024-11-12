@@ -12,8 +12,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class DesktopHomeScreen extends StatelessWidget {
-  const DesktopHomeScreen({super.key, required this.homeScreenController});
-  final HomeScreenController homeScreenController;
+  DesktopHomeScreen({super.key, required});
+  final HomeScreenController homeScreenController = Get.put(HomeScreenController());
 
   @override
   Widget build(BuildContext context) {
@@ -22,27 +22,21 @@ class DesktopHomeScreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Obx(
-            () => Visibility(
-              visible: homeScreenController.navbarVisible.value,
-              child: NavigationSection(homeScreenController: homeScreenController)
-            ),
-          ),
+          NavigationSection(homeScreenController: homeScreenController),          
           Expanded(
             child: ListView(
-              controller: homeScreenController.scrollController,
               shrinkWrap: true,
               physics: ClampingScrollPhysics(),
               children: [
                 // Introduction Section
-                IntroductionSection(),
+                IntroductionSection(introductionGlobalKey: homeScreenController.introductionGlobalKey),
                 // About Us Section
-                AboutUsSection(),
+                AboutUsSection(aboutMeGlobalKey: homeScreenController.aboutMeGlobalKey,),
                 // Service  Section
-                ServiceSection(),
+                ServiceSection(serviceGlobalKey: homeScreenController.serviceGlobalKey),
                 // Portfolio Section
-                OurProjectsSection(),
-                TestimonialSection(),
+                OurProjectsSection(portfolioGlobalKey: homeScreenController.portfolioGlobalKey),
+                TestimonialSection(testimonialsGlobalKey: homeScreenController.testimonialsGlobalKey),
                 CustomSpacing(height: .05),
               ],
             ),

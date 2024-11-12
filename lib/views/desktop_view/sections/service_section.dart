@@ -7,11 +7,13 @@ import 'package:codink_coop/widgets/text.dart';
 import 'package:flutter/material.dart';
 
 class ServiceSection extends StatelessWidget {
-  const ServiceSection({super.key});
+  const ServiceSection({super.key, required this.serviceGlobalKey});
+  final GlobalKey serviceGlobalKey;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
+      key: serviceGlobalKey,
       padding: EdgeInsets.symmetric(
         horizontal: horizontalSpace(context, .025),
         vertical: verticalSpace(context, .02),
