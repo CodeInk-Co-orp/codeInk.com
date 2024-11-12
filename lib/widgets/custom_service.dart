@@ -14,7 +14,7 @@ class CustomService extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Container(
       width: 350,
-      height: 400,
+      height: 350,
       decoration: BoxDecoration(
         color: isLightTheme(context) ? KColors.blue.withOpacity(.05) : KColors.darkerGrey,
         borderRadius: BorderRadius.circular(10)
