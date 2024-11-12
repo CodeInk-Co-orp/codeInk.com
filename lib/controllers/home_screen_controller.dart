@@ -22,15 +22,19 @@ class HomeScreenController extends GetxController{
   }
 
   void navigateToSection(String label){
-    Scrollable.ensureVisible(
-      label.toLowerCase() == 'service' ? serviceGlobalKey.currentContext!
-      : label.toLowerCase() == 'about us' ? aboutMeGlobalKey.currentContext!
-      : label.toLowerCase() == 'our projects' ? portfolioGlobalKey.currentContext!
-      : label.toLowerCase() == 'testimonials' ? testimonialsGlobalKey.currentContext!
-      : introductionGlobalKey.currentContext!,
-      duration: const Duration(milliseconds: 500),
-      curve: Curves.easeInOut,
-    );
+    try{
+      Scrollable.ensureVisible(
+        label.toLowerCase() == 'service' ? serviceGlobalKey.currentContext!
+        : label.toLowerCase() == 'about us' ? aboutMeGlobalKey.currentContext!
+        : label.toLowerCase() == 'our projects' ? portfolioGlobalKey.currentContext!
+        : label.toLowerCase() == 'testimonials' ? testimonialsGlobalKey.currentContext!
+        : introductionGlobalKey.currentContext!,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.easeInOut,
+      );
+    } catch(e){
+      logging(e);
+    }
   }
 
   @override

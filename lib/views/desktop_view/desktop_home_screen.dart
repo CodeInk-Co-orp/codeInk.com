@@ -24,21 +24,23 @@ class DesktopHomeScreen extends StatelessWidget {
         children: [
           NavigationSection(homeScreenController: homeScreenController),          
           Expanded(
-            child: ListView(
-              shrinkWrap: true,
-              physics: ClampingScrollPhysics(),
-              children: [
-                // Introduction Section
-                IntroductionSection(introductionGlobalKey: homeScreenController.introductionGlobalKey),
-                // About Us Section
-                AboutUsSection(aboutMeGlobalKey: homeScreenController.aboutMeGlobalKey,),
-                // Service  Section
-                ServiceSection(serviceGlobalKey: homeScreenController.serviceGlobalKey),
-                // Portfolio Section
-                OurProjectsSection(portfolioGlobalKey: homeScreenController.portfolioGlobalKey),
-                TestimonialSection(testimonialsGlobalKey: homeScreenController.testimonialsGlobalKey),
-                CustomSpacing(height: .05),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                // shrinkWrap: true,
+                // physics: ClampingScrollPhysics(),
+                children: [
+                  // Introduction Section
+                  IntroductionSection(introductionGlobalKey: homeScreenController.introductionGlobalKey),
+                  // About Us Section
+                  AboutUsSection(aboutMeGlobalKey: homeScreenController.aboutMeGlobalKey,),
+                  // Service  Section
+                  ServiceSection(serviceGlobalKey: homeScreenController.serviceGlobalKey),
+                  // Portfolio Section
+                  OurProjectsSection(portfolioGlobalKey: homeScreenController.portfolioGlobalKey),
+                  TestimonialSection(testimonialsGlobalKey: homeScreenController.testimonialsGlobalKey),
+                  CustomSpacing(height: .05),
+                ],
+              ),
             ),
           ),
         ],

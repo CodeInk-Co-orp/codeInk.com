@@ -5,10 +5,10 @@ HomeScreenController homeScreenController = Get.put(HomeScreenController());
 
 List<Map<String, dynamic>> navigationTabs = [
   {
-    'label' : 'Service',
+    'label' : 'About US',
   },
   {
-    'label' : 'About US',
+    'label' : 'Service',
   },
   {
     'label' : 'Our Projects',
