@@ -16,7 +16,7 @@ class CustomProjects extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Container(
       width: !LayoutScreen.isSmallScreen(context) ? 350 : 250,
-      height: !LayoutScreen.isSmallScreen(context) ? 380 : 370,
+      height: !LayoutScreen.isSmallScreen(context) ? 380 : 380,
       decoration: BoxDecoration(
         color: isLightTheme(context) ? KColors.blue.withOpacity(.05) : KColors.darkerGrey,
         borderRadius: BorderRadius.circular(10)
