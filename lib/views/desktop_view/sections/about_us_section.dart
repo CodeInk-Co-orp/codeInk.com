@@ -118,7 +118,10 @@ class AboutUsSection extends StatelessWidget {
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
-                                        CustomLabelAndDivider(label: "CodeInk Solutions"),
+                                        CustomLabelAndDivider(
+                                          label: "CodeInk Solutions",
+                                          textColor: isLightTheme(context) ? KColors.black : KColors.white,
+                                        ),
                                         CustomSpacing(height: .025),
                                         CustomText(
                                           text: '''We are passionate about transforming ideas into digital experiences that engage and inspire.Our team is composed of skilled developers, designers, and strategists who specialize in crafting custom software solutions,from mobile and web applications to graphic design and branding. With a focus on both functionality and aesthetics,we bring expertise across multiple domains, including Android and iOS app development, web applications,API and payment integrations, and graphic design.''', 
