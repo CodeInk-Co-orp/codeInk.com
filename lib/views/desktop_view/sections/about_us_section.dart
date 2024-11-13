@@ -2,6 +2,7 @@ import 'package:codink_coop/services/get_theme.dart';
 import 'package:codink_coop/utils/themes.dart';
 import 'package:codink_coop/views/layout_screen.dart';
 import 'package:codink_coop/widgets/custom_spacing.dart';
+import 'package:codink_coop/widgets/label_and_divider.dart';
 import 'package:codink_coop/widgets/space.dart';
 import 'package:codink_coop/widgets/text.dart';
 import 'package:flutter/material.dart';
@@ -92,37 +93,65 @@ class AboutUsSection extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      height: verticalSpace(context, .65) < 350 ? 350 : verticalSpace(context, .65),
-                      width: horizontalSpace(context, 0.4),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                          image: AssetImage(
-                            "assets/images/office.jpg",
+                SizedBox(
+                  height: 450,
+                  child: Stack(
+                    children: [
+                      Center(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: KColors.darkerGrey,
+                            borderRadius: BorderRadius.circular(12),
                           ),
-                          fit: BoxFit.cover
-                        )
-                      ),
-                    ),
-                    SizedBox(width: horizontalSpace(context, 0.025)),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 8.0),
-                        child: Center(
-                          child: CustomText(
-                            text: '''At CodeInk Solutions, we are passionate about transforming ideas into digital experiences that engage and inspire.Our team is composed of skilled developers, designers, and strategists who specialize in crafting custom software solutions,from mobile and web applications to graphic design and branding. With a focus on both functionality and aesthetics,we bring expertise across multiple domains, including Android and iOS app development, web applications,API and payment integrations, and graphic design.''', 
-                            fontSize: 18,
-                            textAlign: TextAlign.start,
-                            textColor: isLightTheme(context) ? KColors.black : KColors.lightGrey,
+                          height: 400,
+                          child: Row(
+                            children: [
+                              CustomSpacing(
+                                width: .425,
+                              ),
+                              SizedBox(
+                                width: horizontalSpace(context, .5),
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                                  child: Center(
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        CustomLabelAndDivider(label: "CodeInk Solutions"),
+                                        CustomSpacing(height: .025),
+                                        CustomText(
+                                          text: '''We are passionate about transforming ideas into digital experiences that engage and inspire.Our team is composed of skilled developers, designers, and strategists who specialize in crafting custom software solutions,from mobile and web applications to graphic design and branding. With a focus on both functionality and aesthetics,we bring expertise across multiple domains, including Android and iOS app development, web applications,API and payment integrations, and graphic design.''', 
+                                          fontSize: 18,
+                                          textAlign: TextAlign.start,
+                                          textColor: isLightTheme(context) ? KColors.black : KColors.lightGrey,
+                                          maxLines: 12,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      Container(
+                        height: 450,
+                        width: horizontalSpace(context, 0.4),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                            image: AssetImage(
+                              "assets/images/office.jpg",
+                            ),
+                            fit: BoxFit.cover
+                          )
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 CustomSpacing(height: .025),
                 CustomText(
