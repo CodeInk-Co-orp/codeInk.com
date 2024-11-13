@@ -4,7 +4,7 @@ import 'package:codink_coop/utils/themes.dart';
 import 'package:codink_coop/views/desktop_view/sections/about_us_section.dart';
 import 'package:codink_coop/views/desktop_view/sections/contact_us_section.dart';
 import 'package:codink_coop/views/desktop_view/sections/introduction_section.dart';
-import 'package:codink_coop/views/desktop_view/sections/maps_section.dart';
+// import 'package:codink_coop/views/desktop_view/sections/maps_section.dart';
 import 'package:codink_coop/views/desktop_view/sections/navigation_section.dart';
 import 'package:codink_coop/views/desktop_view/sections/our_projects_section.dart';
 import 'package:codink_coop/views/desktop_view/sections/service_section.dart';
@@ -40,9 +40,8 @@ class DesktopHomeScreen extends StatelessWidget {
                   // Portfolio Section
                   OurProjectsSection(portfolioGlobalKey: homeScreenController.portfolioGlobalKey),
                   TestimonialSection(testimonialsGlobalKey: homeScreenController.testimonialsGlobalKey),
-                  // Contact Section
                   ContactUsSection(),
-                  MapsSection(mapsSectionKey: homeScreenController.mapsGlobalKey),
+                  // MapsSection(mapsSectionKey: homeScreenController.mapsGlobalKey),
                   CustomSpacing(height: .05),
                 ],
               ),

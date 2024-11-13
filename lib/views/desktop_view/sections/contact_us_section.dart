@@ -169,7 +169,7 @@ class ContactUsSection extends StatelessWidget {
                         CustomContactUs(
                           img: "clock.png", 
                           title: "Availability", 
-                          subtitle: "24/7", 
+                          subtitle: "Everyday 0700hrs to 1700hrs", 
                           onTap: (){}
                         ),
                         CustomSpacing(
@@ -194,7 +194,7 @@ class ContactUsSection extends StatelessWidget {
                       children: [
                         SocialMedia(img: "github.png", onTap: () {}),
                         SocialMedia(img: "linkedin.png", onTap: () {  },),
-                        SocialMedia(img: "web.png", onTap: () {  },),
+                        SocialMedia(img: "social.png", onTap: () {  },),
                         SocialMedia(img: "twitter.png", onTap: () {  },),
                       ],
                     )
