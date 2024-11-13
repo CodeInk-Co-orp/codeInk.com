@@ -13,6 +13,7 @@ class HomeScreenController extends GetxController{
   GlobalKey aboutMeGlobalKey = GlobalKey();
   GlobalKey portfolioGlobalKey = GlobalKey();
   GlobalKey testimonialsGlobalKey = GlobalKey();
+  GlobalKey mapsGlobalKey = GlobalKey();
   
   void scrollListen(){
     List<double> trend = [];
