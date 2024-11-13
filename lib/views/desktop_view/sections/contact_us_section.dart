@@ -192,7 +192,7 @@ class ContactUsSection extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SocialMedia(img: "github.png", onTap: () {contactUsController.launchURL("https://stackoverflow.com/questions/45523370/how-to-make-a-phone-call-from-a-flutter-app"); },),
+                        SocialMedia(img: "github.png", onTap: () {}),
                         SocialMedia(img: "linkedin.png", onTap: () {  },),
                         SocialMedia(img: "web.png", onTap: () {  },),
                         SocialMedia(img: "twitter.png", onTap: () {  },),
