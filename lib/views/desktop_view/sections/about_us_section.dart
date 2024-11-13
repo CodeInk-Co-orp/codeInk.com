@@ -100,7 +100,7 @@ class AboutUsSection extends StatelessWidget {
                       Center(
                         child: Container(
                           decoration: BoxDecoration(
-                            color: KColors.darkerGrey,
+                            color: isLightTheme(context) ? KColors.blue.withOpacity(.05) : KColors.darkerGrey,
                             borderRadius: BorderRadius.circular(12),
                           ),
                           height: 400,
