@@ -1,10 +1,13 @@
+import 'dart:async';
+
 import 'package:codink_coop/widgets/space.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class MapsSection extends StatelessWidget {
-  const MapsSection({super.key, required this.mapsSectionKey});
+  MapsSection({super.key, required this.mapsSectionKey});
   final GlobalKey mapsSectionKey;
+  final Completer<GoogleMapController> _controller = Completer<GoogleMapController>();
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +19,9 @@ class MapsSection extends StatelessWidget {
         initialCameraPosition: CameraPosition(
           target: LatLng(-1.286389, 36.817223),
         ),
+        onMapCreated: (GoogleMapController controller) {
+          _controller.complete(controller);
+        },
       ),
     );
   }
