@@ -1,6 +1,4 @@
-import "package:codink_coop/widgets/custom_spacing.dart";
 import "package:codink_coop/widgets/space.dart";
-import "package:codink_coop/widgets/text.dart";
 import "package:flutter/material.dart";
 import "package:flutter/services.dart";
 
@@ -11,7 +9,7 @@ class CustomTextInput extends StatelessWidget {
   final bool? obsecureText;
   final bool? enable;
   final String hintText;
-  final String label;
+  final String? label;
   final EdgeInsetsGeometry? contentPadding;
   final EdgeInsetsGeometry? outterPadding;
   final Iterable<String>? autofillHints;
@@ -43,7 +41,7 @@ class CustomTextInput extends StatelessWidget {
     this.height,
     this.suffix,
     this.prefix,
-    required this.label,
+    this.label,
     this.textCapitalization,
     this.outterPadding,
     this.hintShade,
@@ -61,13 +59,6 @@ class CustomTextInput extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          CustomText(
-            text: label, 
-            fontSize: 14, 
-            textColor: Colors.grey.shade900,
-            fontWeight: FontWeight.bold,
-          ),
-          const CustomSpacing(height: .0075),
           TextFormField(
             controller: controller,
             validator: validator,
