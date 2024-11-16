@@ -1,4 +1,7 @@
+import "package:codink_coop/services/get_theme.dart";
+import "package:codink_coop/utils/themes.dart";
 import "package:codink_coop/widgets/space.dart";
+import "package:codink_coop/widgets/text.dart";
 import "package:flutter/material.dart";
 import "package:flutter/services.dart";
 
@@ -74,17 +77,21 @@ class CustomTextInput extends StatelessWidget {
             inputFormatters: [
               LengthLimitingTextInputFormatter(maxLength)
             ],
+            style: TextStyle(
+              color: isLightTheme(context) ? KColors.black : KColors.white,
+            ),
             decoration: InputDecoration(
               prefixIcon: prefix,
-              fillColor: Colors.grey.shade100,
+              fillColor: isLightTheme(context) ? Colors.grey.shade100 : KColors.darkerGrey,
               filled: true,
-              hintText: hintText,
               contentPadding: contentPadding ?? const EdgeInsets.symmetric(
                 horizontal: 12,
               ),
-              hintStyle: TextStyle(
-                color: hintShade ?? Colors.grey.shade600,
-                fontSize: 14,
+              hintText: hintText,
+              label: CustomText(
+                text: hintText, 
+                fontSize: 12, 
+                textColor: isLightTheme(context) ? Colors.black.withOpacity(.8) : KColors.white.withOpacity(.8),
                 fontWeight: FontWeight.normal,
               ),
               border: UnderlineInputBorder(

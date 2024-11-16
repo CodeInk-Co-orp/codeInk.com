@@ -11,7 +11,7 @@ class ContactUsController extends GetxController{
 
   Future launchURL(String link) async{
     if (!await launchUrl(Uri.parse(link))) {
-    throw Exception('Could not launch $link');
-  }
+      throw Exception('Could not launch $link');
+    }
   }
 }

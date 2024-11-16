@@ -42,12 +42,12 @@ class CustomTestimonial extends StatelessWidget {
                   children: [
                     CustomText(
                       text: name, 
-                      fontSize: 20, 
+                      fontSize: 18, 
                       textColor: isLightTheme(context) ? KColors.black : KColors.white,
                     ),
                     CustomText(
                       text: location, 
-                      fontSize: 16, 
+                      fontSize: 15, 
                       textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey,
                     ),
                   ],
