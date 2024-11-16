@@ -13,6 +13,7 @@ class HomeScreenController extends GetxController{
   GlobalKey aboutMeGlobalKey = GlobalKey();
   GlobalKey portfolioGlobalKey = GlobalKey();
   GlobalKey testimonialsGlobalKey = GlobalKey();
+  GlobalKey contactGlobalKey = GlobalKey();
   GlobalKey mapsGlobalKey = GlobalKey();
   
   void scrollListen(){
@@ -29,6 +30,7 @@ class HomeScreenController extends GetxController{
         : label.toLowerCase() == 'about us' ? aboutMeGlobalKey.currentContext!
         : label.toLowerCase() == 'our projects' ? portfolioGlobalKey.currentContext!
         : label.toLowerCase() == 'testimonials' ? testimonialsGlobalKey.currentContext!
+        : label.toLowerCase() == 'contact' ? contactGlobalKey.currentContext!
         : introductionGlobalKey.currentContext!,
         duration: const Duration(milliseconds: 500),
         curve: Curves.easeInOut,

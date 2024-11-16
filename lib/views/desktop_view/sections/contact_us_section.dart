@@ -1,7 +1,7 @@
 import 'package:codink_coop/controllers/contact_us_controller.dart';
 import 'package:codink_coop/services/get_theme.dart';
 import 'package:codink_coop/utils/themes.dart';
-import 'package:codink_coop/widgets/button.dart';
+import 'package:codink_coop/views/layout_screen.dart';
 import 'package:codink_coop/widgets/custom_contact_us.dart';
 import 'package:codink_coop/widgets/custom_spacing.dart';
 import 'package:codink_coop/widgets/input.dart';
@@ -13,11 +13,13 @@ import 'package:get/get.dart';
 
 class ContactUsSection extends StatelessWidget {
   final ContactUsController contactUsController = Get.put(ContactUsController());
-  ContactUsSection({super.key});
+  final GlobalKey contactGlobalKey;
+  ContactUsSection({super.key, required this.contactGlobalKey});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
+      key: contactGlobalKey,
       padding: EdgeInsets.symmetric(
         horizontal: horizontalSpace(context, .025),
         vertical: horizontalSpace(context, .0125),
@@ -52,11 +54,14 @@ class ContactUsSection extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        CustomText(
-                          text: "Get in touch with us", 
-                          fontSize: 30, 
-                          textColor: isLightTheme(context) ? KColors.black : KColors.white,
-                          fontWeight: FontWeight.w500,
+                        Visibility(
+                          visible: LayoutScreen.isLargeScreen(context),
+                          child: CustomText(
+                            text: "Get in touch with us", 
+                            fontSize: 30, 
+                            textColor: isLightTheme(context) ? KColors.black : KColors.white,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                         Form(
                           key: contactUsController.formKey,
@@ -109,17 +114,27 @@ class ContactUsSection extends StatelessWidget {
                                 SizedBox(
                                   height: verticalSpace(context, 0.03),
                                 ),
-                                Padding(
-                                  padding: EdgeInsets.symmetric(
-                                    horizontal: horizontalSpace(context, 0.15)
-                                  ),
-                                  child: CustomButton(
-                                    onPressed: (){
-                                      if(contactUsController.formKey.currentState!.validate()){
-                                        
-                                      }
-                                    }, 
-                                    text: "Send message"
+                                Center(
+                                  child: GestureDetector(
+                                    onTap: (){
+
+                                    },
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: isLightTheme(context) ? KColors.blue : KColors.white,
+                                        borderRadius: BorderRadius.circular(12),
+                                      ),
+                                      height: 40,
+                                      width: 175,
+                                      child: Center(
+                                        child: CustomText(
+                                          text: "Send Message",
+                                          fontSize: 23,
+                                          textColor: isLightTheme(context) ? KColors.white : KColors.black,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ],
@@ -134,10 +149,13 @@ class ContactUsSection extends StatelessWidget {
               CustomSpacing(
                 width: 0.02,
               ),
-              Expanded(
+              Visibility(
+                visible: LayoutScreen.isLargeScreen(context),
                 child: SizedBox(
                   height: verticalSpace(context, 0.5),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CustomLabelAndDivider(
                         label: "Contact details",

@@ -1,3 +1,4 @@
+import 'package:codink_coop/controllers/home_screen_controller.dart';
 import 'package:codink_coop/services/get_theme.dart';
 import 'package:codink_coop/utils/themes.dart';
 import 'package:codink_coop/views/layout_screen.dart';
@@ -8,8 +9,9 @@ import 'package:codink_coop/widgets/text.dart';
 import 'package:flutter/material.dart';
 
 class IntroductionSection extends StatelessWidget {
-  const IntroductionSection({super.key, required this.introductionGlobalKey});
+  const IntroductionSection({super.key, required this.introductionGlobalKey, required this.homeScreenController});
   final GlobalKey introductionGlobalKey;
+  final HomeScreenController homeScreenController;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +61,7 @@ class IntroductionSection extends StatelessWidget {
                 CustomButton(
                   horizontalPadding: .13,
                   onPressed: (){
-        
+                    homeScreenController.navigateToSection('contact');
                   },
                   text: "Book Us NOW"
                 )
@@ -125,7 +127,7 @@ class IntroductionSection extends StatelessWidget {
                 CustomSpacing(height: .05),
                 CustomButton(
                   onPressed: (){
-        
+                    homeScreenController.navigateToSection('contact');
                   },
                   text: "Book Us NOW"
                 )

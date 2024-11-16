@@ -31,7 +31,7 @@ class MobileHomeScreen extends StatelessWidget {
                   // physics: ClampingScrollPhysics(),
                   children: [
                     // Introduction Section
-                    IntroductionSection(introductionGlobalKey: homeScreenController.introductionGlobalKey),
+                    IntroductionSection(introductionGlobalKey: homeScreenController.introductionGlobalKey, homeScreenController: homeScreenController),
                     // About Us Section
                     AboutMobileSection(aboutMeGlobalKey: homeScreenController.aboutMeGlobalKey,),
                     // Service  Section

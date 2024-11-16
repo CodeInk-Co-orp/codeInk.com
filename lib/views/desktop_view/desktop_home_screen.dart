@@ -32,7 +32,7 @@ class DesktopHomeScreen extends StatelessWidget {
                 // physics: ClampingScrollPhysics(),
                 children: [
                   // Introduction Section
-                  IntroductionSection(introductionGlobalKey: homeScreenController.introductionGlobalKey),
+                  IntroductionSection(introductionGlobalKey: homeScreenController.introductionGlobalKey, homeScreenController: homeScreenController),
                   // About Us Section
                   AboutUsSection(aboutMeGlobalKey: homeScreenController.aboutMeGlobalKey,),
                   // Service  Section
@@ -40,7 +40,7 @@ class DesktopHomeScreen extends StatelessWidget {
                   // Portfolio Section
                   OurProjectsSection(portfolioGlobalKey: homeScreenController.portfolioGlobalKey),
                   TestimonialSection(testimonialsGlobalKey: homeScreenController.testimonialsGlobalKey),
-                  ContactUsSection(),
+                  ContactUsSection(contactGlobalKey: homeScreenController.contactGlobalKey),
                   // MapsSection(mapsSectionKey: homeScreenController.mapsGlobalKey),
                   CustomSpacing(height: .05),
                 ],

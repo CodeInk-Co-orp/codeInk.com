@@ -77,38 +77,34 @@ class NavigationSection extends StatelessWidget {
                   ],
                 ),
               ),
-              Visibility(
-                visible: !LayoutScreen.isSmallScreen(context),
-                child: CustomButton(
-                  onPressed: (){},
-                  color: Colors.purple,
-                  text: "Contact"
+              !LayoutScreen.isSmallScreen(context) ? CustomButton(
+                onPressed: (){
+                  homeScreenController.navigateToSection('contact');
+                },
+                color: Colors.purple,
+                text: "Contact"
+              ) : 
+              PopupMenuButton(
+                color: isLightTheme(context) ? KColors.white : KColors.black,
+                icon: Icon(
+                  Icons.more_vert,
+                  color: isLightTheme(context) ? KColors.black : KColors.white,
                 ),
-              ),
-              Visibility(
-                visible: LayoutScreen.isSmallScreen(context),
-                child: PopupMenuButton(
-                  color: isLightTheme(context) ? KColors.white : KColors.black,
-                  icon: Icon(
-                    Icons.more_vert,
-                    color: isLightTheme(context) ? KColors.black : KColors.white,
-                  ),
-                  itemBuilder: (context) => [
-                    ...List.generate(
-                      navigationTabs.length,
-                      (index) => PopupMenuItem(
-                        onTap: (){
-                          homeScreenController.navigateToSection(navigationTabs[index]['label']);
-                        },
-                        child: CustomText(
-                          text: navigationTabs[index]['label'],
-                          fontSize: 18,
-                          textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey
-                        )
+                itemBuilder: (context) => [
+                  ...List.generate(
+                    navigationTabs.length,
+                    (index) => PopupMenuItem(
+                      onTap: (){
+                        homeScreenController.navigateToSection(navigationTabs[index]['label']);
+                      },
+                      child: CustomText(
+                        text: navigationTabs[index]['label'],
+                        fontSize: 18,
+                        textColor: isLightTheme(context) ? KColors.darkGrey : KColors.lightGrey
                       )
-                    ),
-                  ],
-                ),
+                    )
+                  ),
+                ],
               ),
             ],
           ),
