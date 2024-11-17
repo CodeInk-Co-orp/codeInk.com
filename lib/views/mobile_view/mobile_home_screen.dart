@@ -1,6 +1,7 @@
 import 'package:codink_coop/controllers/home_screen_controller.dart';
 import 'package:codink_coop/services/get_theme.dart';
 import 'package:codink_coop/utils/themes.dart';
+import 'package:codink_coop/views/desktop_view/sections/contact_us_section.dart';
 import 'package:codink_coop/views/desktop_view/sections/introduction_section.dart';
 import 'package:codink_coop/views/desktop_view/sections/navigation_section.dart';
 import 'package:codink_coop/views/desktop_view/sections/our_projects_section.dart';
@@ -39,7 +40,9 @@ class MobileHomeScreen extends StatelessWidget {
                     // Portfolio Section
                     OurProjectsSection(portfolioGlobalKey: homeScreenController.portfolioGlobalKey),
                     TestimonialSection(testimonialsGlobalKey: homeScreenController.testimonialsGlobalKey),
-                    CustomSpacing(height: .05),
+                  ContactUsSection(contactGlobalKey: homeScreenController.contactGlobalKey),
+                  // MapsSection(mapsSectionKey: homeScreenController.mapsGlobalKey),
+                  CustomSpacing(height: .05),
                   ],
                 ),
               ),
